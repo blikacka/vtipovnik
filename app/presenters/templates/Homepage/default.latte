@@ -1,0 +1,23 @@
+{block content}
+
+<section id="cd-timeline" class="cd-container">
+    {foreach $jokes as $joke}
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img" style="background: {! $joke->iconColor}">
+                <i class="fa {$joke->icon}"></i>
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>{$joke->title}</h2>
+                <p>{$joke->joke}</p>
+                {*<a href="#0" class="cd-read-more">Read more</a>*}
+                <span class="cd-date">
+                    <div>{$joke->created|date:'d.m.Y H:i'}</div>
+                    <div>{$joke->user->name}</div>
+                </span>
+            </div> <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+    {/foreach}
+
+</section> <!-- cd-timeline -->
