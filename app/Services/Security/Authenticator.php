@@ -12,15 +12,13 @@ use Nette\Security\Passwords;
 /**
  * @author Jakub Cieciala <jakub.cieciala@gmail.com>
  */
-class Authenticator extends Object implements IAuthenticator{
+class Authenticator extends Object implements IAuthenticator {
 
 	/** @var EntityDao */
 	private $userDao;
 
 	/** @var Passwords */
 	private $password;
-
-
 
 	function __construct(EntityDao $userDao, Passwords $passwords) {
 		$this->userDao = $userDao;
@@ -37,7 +35,7 @@ class Authenticator extends Object implements IAuthenticator{
 		$login = $credentials[0];
 		$password = $credentials[1];
 		/** @var \App\Entities\User $user */
-		$user = $this->userDao->findOneBy(array("login" => $login));
+		$user = $this->userDao->findOneBy(["login" => $login]);
 		if ($user === null) {
 			throw new AuthenticationException("Špatný login", self::IDENTITY_NOT_FOUND);
 		}

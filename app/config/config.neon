@@ -18,25 +18,27 @@ doctrine:
 php:
 	date.timezone: Europe/Prague
 
-
 application:
 	errorPresenter: Error
 	mapping:
 		*: App\*Module\Presenters\*Presenter
 
-
 session:
 	expiration: 14 days
 
-
 services:
-	- App\Forms\FormFactory
-	- App\Forms\SignFormFactory
 	- Nette\Security\Passwords
 	- App\Services\Security\Authenticator(@doctrine.dao(App\Entities\User))
-	- App\Forms\RegisterForm
 
+	# Forms
+	- App\Forms\FormFactory
+	- App\Forms\SignFormFactory
+	- App\Forms\RegisterForm
 	- App\Forms\JokeForm
+
+	# Queries
+	- App\Services\Queries\JokeQueries
+
 	router: App\RouterFactory::createRouter
 
 extensions:

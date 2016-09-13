@@ -56,7 +56,7 @@ class Joke extends BaseEntity {
 	protected $icon;
 
 	/**
-	 * @ORM\Column(length=7, name="iconColor")
+	 * @ORM\Column(length=7, name="icon_color")
 	 * @var string
 	 */
 	protected $iconColor;

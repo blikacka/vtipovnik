@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="VIA">
+  <component name="PublishConfigData" serverName="Jira chat">
     <serverData>
-      <paths name="SN">
+      <paths name="Jira chat">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Sportnect">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="VIA">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/nette-blog" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="sportnect.local">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="vtipovnik" />
           </mappings>
         </serverdata>
       </paths>

@@ -52,7 +52,6 @@ class User extends BaseEntity implements IIdentity {
 	}
 
 	function getRoles() {
-		// TODO: Implement getRoles() method.
 	}
 
 

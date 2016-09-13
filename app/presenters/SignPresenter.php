@@ -20,10 +20,12 @@ class SignPresenter extends BasePresenter {
 	 */
 	protected function createComponentSignInForm() {
 		$form = $this->factory->create();
+
 		$form->onSuccess[] = function ($form) {
-			$form->getPresenter()->flashMessage("Byli jste přihlášeni");
 			$form->getPresenter()
-				->redirect('Homepage:');
+			     ->flashMessage("Byli jste přihlášeni");
+			$form->getPresenter()
+			     ->redirect('Homepage:');
 		};
 		return $form;
 	}
@@ -31,19 +33,19 @@ class SignPresenter extends BasePresenter {
 
 	public function actionOut() {
 		$this->getUser()
-			->logout();
+		     ->logout();
 	}
 
 	public function createComponentRegisterForm() {
 		$form = $this->registerForm->create();
 		$form->onSuccess[] = function ($form) {
-			$form->getPresenter()->flashMessage("Uživatel byl úspěšně zaregistrován");
 			$form->getPresenter()
-				->redirect('Homepage:');
+			     ->flashMessage("Uživatel byl úspěšně zaregistrován");
+			$form->getPresenter()
+			     ->redirect('Homepage:');
 		};
 		return $form;
 	}
-
 
 
 }
